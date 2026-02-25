@@ -24,17 +24,27 @@ scroll-behavior:smooth;
 }
 
 .navbar{
-background: linear-gradient(120deg, #2f55c7 0%, #17a673 50%, #138f6a 100%);
+    background: linear-gradient(
+  120deg,
+  #201547 0%,
+  #2c087a 40%,
+  #560a8a 70%,
+  #b5176b 100%
+);
 }
 
 .hero{
-background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622');
-background-size:cover;
-background-position:center;
-color:#fff;
-padding:150px 0;
-text-align:center;
+background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+url('https://3.imimg.com/data3/NQ/KX/MY-10099245/0.jpg');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #fff;
+text-align: center;
 }
 
 .section{
@@ -52,22 +62,63 @@ box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
 
 .btn-custom{
-background:#1cc88a;
+background: linear-gradient(120deg, #2b1f5e 0%, #3a0ca3 40%, #7209b7 70%, #f72585 100%);
 color:#fff;
 border-radius:30px;
 padding:10px 25px;
 }
 
 .btn-custom:hover{
-background:#17a673;
+background: linear-gradient(120deg, #2b1f5e 20%, #3a0ca3 30%, #7209b7 60%, #f72585 100%);
 color:#fff;
 }
 
+
+.testimonial-box{
+max-width:750px;
+background:#ffffff;
+padding:40px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.1);
+transition:0.4s;
+}
+
+.testimonial-box:hover{
+transform:translateY(-5px);
+}
+
+.carousel-indicators [data-bs-target]{
+background-color:#1e3c72;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+filter:invert(1);
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.gallery-item img {
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+
+
 .footer{
-background:#111;
+background:black;
 color:#fff;
 padding:40px 0;
 }
+
+
+
 </style>
 </head>
 <body>
@@ -81,6 +132,7 @@ padding:40px 0;
 </button>
 <div class="collapse navbar-collapse" id="nav">
 <ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
 <li class="nav-item"><a class="nav-link text-white" href="#event">Event</a></li>
 <li class="nav-item"><a class="nav-link text-white" href="#registration">Registration</a></li>
 <li class="nav-item"><a class="nav-link text-white" href="#attendee">Attendee</a></li>
@@ -104,38 +156,57 @@ Manage Conferences, Weddings, Workshops & Concerts Seamlessly
 </section>
 
 
+
+
+
+<!-- About Us -->
 <section id="about" class="section">
 <div class="container">
 <div class="row align-items-center">
 <div class="col-md-6" data-aos="fade-left">
-<img src="1.jpg" class="img-fluid feature-img">
+<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" class="img-fluid feature-img" alt="Team collaboration">
 </div>
 <div class="col-md-6" data-aos="fade-right">
 <h2 class="section-title">About Us</h2>
-<p class="about-text">
-EventPro is a modern and intelligent Event Management System designed to simplify planning, organizing, and executing events of any scale. From conferences and weddings to concerts and corporate meetings, our platform ensures smooth coordination, real-time tracking, and powerful analytics.
-</p>
-<p class="about-text">
-Our mission is to empower event planners with technology that enhances efficiency, improves attendee experience, and maximizes event success.
-</p>
+<p>We are a dedicated team focused on delivering seamless event management solutions. Our mission is to simplify event planning through smart tools, intuitive design, and reliable performance.</p>
+<ul>
+<li>Customer-Centered Approach</li>
+<li>Innovative Event Solutions</li>
+<li>Reliable & Secure Platform</li>
+<li>Dedicated Support Team</li>
+</ul>
 </div>
-
 </div>
 </div>
 </section>
 
+
+
+
+
+
+
+
+
+
 <!-- Event Creation -->
-<section id="event" class="section">
+<section id="event" class="section" style="background: linear-gradient(
+  120deg,
+  #b5176b 0%,
+  #560a8a 30%,
+  #2c087a 60%,
+  #201547 100%
+);">
 <div class="container">
 <div class="row align-items-center">
 <div class="col-md-6" data-aos="fade-right">
-<h2 class="section-title">Event Creation & Management</h2>
-<p>Create, edit and manage events easily. Schedule dates, assign categories, track event status and manage recurring events efficiently.</p>
+<h2 class="section-title text-white">Event Creation & Management</h2>
+<p class=" text-white">Create, edit and manage events easily. Schedule dates, assign categories, track event status and manage recurring events efficiently.</p>
 <ul>
-<li>Event Categories</li>
-<li>Recurring Setup</li>
-<li>Status Tracking</li>
-<li>Date & Time Scheduling</li>
+<li class=" text-white">Event Categories</li>
+<li class=" text-white">Recurring Setup</li>
+<li class=" text-white">Status Tracking</li>
+<li class=" text-white">Date & Time Scheduling</li>
 </ul>
 </div>
 <div class="col-md-6" data-aos="fade-left">
@@ -166,18 +237,27 @@ Our mission is to empower event planners with technology that enhances efficienc
 </div>
 </section>
 
+
+
+
 <!-- Attendee -->
-<section id="attendee" class="section">
+<section id="attendee" class="section" style="background: linear-gradient(
+  120deg,
+  #201547 0%,
+  #2c087a 40%,
+  #560a8a 70%,
+  #b5176b 100%
+);">
 <div class="container">
 <div class="row align-items-center">
 <div class="col-md-6" data-aos="fade-right">
-<h2 class="section-title">Attendee Management</h2>
-<p>Track attendance, manage VIP guests, generate badges and perform QR check-in/out.</p>
+<h2 class="section-title text-white">Attendee Management</h2>
+<p class="text-white">Track attendance, manage VIP guests, generate badges and perform QR check-in/out.</p>
 <ul>
-<li>Attendee Database</li>
-<li>QR Scanning</li>
-<li>Badge Printing</li>
-<li>VIP List</li>
+<li class="text-white">Attendee Database</li>
+<li class="text-white">QR Scanning</li>
+<li class="text-white">Badge Printing</li>
+<li class="text-white">VIP List</li>
 </ul>
 </div>
 <div class="col-md-6" data-aos="fade-left">
@@ -209,17 +289,23 @@ Our mission is to empower event planners with technology that enhances efficienc
 </section>
 
 <!-- Venue -->
-<section id="venue" class="section">
+<section id="venue" class="section" style="background: linear-gradient(
+  120deg,
+  #b5176b 0%,
+  #560a8a 30%,
+  #2c087a 60%,
+  #201547 100%
+);">
 <div class="container">
 <div class="row align-items-center">
 <div class="col-md-6" data-aos="fade-right">
-<h2 class="section-title">Venue & Resource Management</h2>
-<p>Design seating layout, track capacity, manage vendors and schedule bookings.</p>
+<h2 class="section-title text-white">Venue & Resource Management</h2>
+<p class="text-white">Design seating layout, track capacity, manage vendors and schedule bookings.</p>
 <ul>
-<li>Seating Planner</li>
-<li>Vendor Contracts</li>
-<li>Booking Calendar</li>
-<li>Conflict Detection</li>
+<li class="text-white">Seating Planner</li>
+<li class="text-white">Vendor Contracts</li>
+<li class="text-white">Booking Calendar</li>
+<li class="text-white">Conflict Detection</li>
 </ul>
 </div>
 <div class="col-md-6" data-aos="fade-left">
@@ -253,34 +339,251 @@ Our mission is to empower event planners with technology that enhances efficienc
 
 
 <!-- Outdoor Branding -->
-<section id="marketing" class="section bg-light">
+<section id="marketing" class="section" style="background: linear-gradient(
+  120deg,
+  #201547 0%,
+  #2c087a 40%,
+  #560a8a 70%,
+  #b5176b 100%
+);">
 <div class="container">
 <div class="row align-items-center flex-md-row-reverse">
 <div class="col-md-6" data-aos="fade-right">
 <img src="https://theventspot.in/wp-content/uploads/2024/08/IMG_7709.jpeg" class="img-fluid feature-img">
 </div>
 <div class="col-md-6" data-aos="fade-left">
-<h2 class="section-title">Outdoor Branding</h2>
-<p>Boost your brand visibility with high-impact outdoor advertising solutions designed to capture attention and create lasting impressions. We deliver creative, large-format branding strategies that strengthen your market presence.</p>
+<h2 class="section-title text-white">Outdoor Branding</h2>
+<p class="text-white">Boost your brand visibility with high-impact outdoor advertising solutions designed to capture attention and create lasting impressions. We deliver creative, large-format branding strategies that strengthen your market presence.</p>
 <ul>
-<li>Trade Sign Boards</li>	
-<li>Backlit Boards</li>
-<li>Frontlit Boards</li>
-<li>Acrylic Letter cut Sign Boards</li>
-<li>SS Fabricated Sign Boards</li>
+<li class="text-white">Trade Sign Boards</li>	
+<li class="text-white">Backlit Boards</li>
+<li class="text-white">Frontlit Boards</li>
+<li class="text-white">Acrylic Letter cut Sign Boards</li>
+<li class="text-white">SS Fabricated Sign Boards</li>
 </ul>
 </div>
 </div>
 </div>
 </section>
 
-<!-- CTA -->
-<section class="section text-center">
-<div class="container" data-aos="zoom-in">
-<h2 class="fw-bold">Start Managing Your Events Smarter</h2>
-<p class="mt-3">All-in-one solution for professional event planners.</p>
-<button class="btn btn-custom mt-3">Get Started</button>
+
+
+
+
+
+
+<!-- Clients Review Section -->
+<section id="clients" class="section bg-light">
+<div class="container">
+<h2 class="section-title text-center" data-aos="fade-up">What Our Clients Say</h2>
+
+<div id="clientCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
+
+<!-- Indicators -->
+<div class="carousel-indicators">
+<button type="button" data-bs-target="#clientCarousel" data-bs-slide-to="0" class="active"></button>
+<button type="button" data-bs-target="#clientCarousel" data-bs-slide-to="1"></button>
+<button type="button" data-bs-target="#clientCarousel" data-bs-slide-to="2"></button>
 </div>
+
+<div class="carousel-inner text-center">
+
+<!-- Review 1 -->
+<div class="carousel-item active">
+<div class="testimonial-box mx-auto">
+<p class="lead">
+“Paul Enterprise made our annual corporate conference seamless and stress-free. Their professionalism and attention to detail were outstanding.”
+</p>
+<h5 class="mt-4 fw-bold">— Rajesh Kumar</h5>
+<span class="text-muted">Corporate Event Manager</span>
+</div>
+</div>
+
+<!-- Review 2 -->
+<div class="carousel-item">
+<div class="testimonial-box mx-auto">
+<p class="lead">
+“Our wedding was perfectly managed from start to finish. The team handled everything beautifully. Highly recommended!”
+</p>
+<h5 class="mt-4 fw-bold">— Priya Sharma</h5>
+<span class="text-muted">Wedding Client</span>
+</div>
+</div>
+
+<!-- Review 3 -->
+<div class="carousel-item">
+<div class="testimonial-box mx-auto">
+<p class="lead">
+“From ticketing to venue coordination, everything was smooth and professional. The analytics dashboard helped us track performance easily.”
+</p>
+<h5 class="mt-4 fw-bold">— Arjun Mehta</h5>
+<span class="text-muted">Conference Organizer</span>
+</div>
+</div>
+
+</div>
+
+<!-- Controls -->
+<button class="carousel-control-prev" type="button" data-bs-target="#clientCarousel" data-bs-slide="prev">
+<span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
+</button>
+
+<button class="carousel-control-next" type="button" data-bs-target="#clientCarousel" data-bs-slide="next">
+<span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
+</button>
+
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="gallery" class="section" style="background: linear-gradient(
+  120deg,
+  #b5176b 0%,
+  #560a8a 30%,
+  #2c087a 60%,
+  #201547 100%
+); padding: 60px 0;">
+<div class="container">
+
+<div class="text-center mb-5">
+<h2 class="section-title text-white">Event Gallery</h2>
+<p class="text-white">Capturing the vibrant spirit of Indian celebrations and grand events.</p>
+</div>
+
+<div class="row g-4">
+
+<!-- Wedding 1 -->
+<div class="col-md-4 col-sm-6">
+<div class="gallery-item">
+<a href="https://yourwebsite.com/wedding-event" target="_blank">
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552" class="img-fluid rounded shadow" alt="Wedding Event">
+</a>
+</div>
+</div>
+
+
+<!-- Wedding 2 -->
+<div class="col-md-4 col-sm-6">
+<div class="gallery-item">
+<a href="https://yourwebsite.com/wedding-event" target="_blank">
+<img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da" class="img-fluid rounded shadow" alt="Wedding Event">
+</a>
+</div>
+</div>
+
+<!-- Wedding 3 -->
+<div class="col-md-4 col-sm-6">
+<div class="gallery-item">
+<a href="https://yourwebsite.com/wedding-event" target="_blank">
+<img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff" class="img-fluid rounded shadow" alt="Wedding Event">
+</a>
+</div>
+</div>
+
+<!-- Wedding 1 -->
+<div class="col-md-4 col-sm-6">
+    <div class="gallery-item">
+        <a href="https://yourwebsite.com/wedding-event-1" target="_blank">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552" 
+                 class="img-fluid rounded shadow" 
+                 alt="Wedding Event 1">
+        </a>
+    </div>
+</div>
+
+<!-- Wedding 2 -->
+<div class="col-md-4 col-sm-6">
+    <div class="gallery-item">
+        <a href="https://yourwebsite.com/wedding-event-2" target="_blank">
+            <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf" 
+                 class="img-fluid rounded shadow" 
+                 alt="Wedding Event 2">
+        </a>
+    </div>
+</div>
+
+<!-- Wedding 3 -->
+<div class="col-md-4 col-sm-6">
+    <div class="gallery-item">
+        <a href="https://yourwebsite.com/wedding-event-3" target="_blank">
+            <img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde" 
+                 class="img-fluid rounded shadow" 
+                 alt="Wedding Event 3">
+        </a>
+    </div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="carousel-item">
+<div class="px-4">
+<h1 class="display-3 text-primary">“</h1>
+<p class="lead fst-italic">
+Excellent event planning and marketing support. 
+The analytics dashboard helped us track everything in real time.
+</p>
+<h6 class="fw-bold mt-3">— Marketing Partner</h6>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</section>
+
+
+
+<!-- CTA -->
+<section class="section text-center d-flex align-items-center justify-content-center"
+    style="background: 
+           linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+           url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&q=80') 
+           center/cover no-repeat;
+           min-height: 500px;
+           color: white;">
+
+    <div class="container" data-aos="zoom-in">
+        <h2 class="fw-bold">Start Managing Your Events Smarter</h2>
+        <p class="mt-3">All-in-one solution for professional event planners.</p>
+        <button class="btn btn-custom mt-3">Get Started</button>
+    </div>
+
 </section>
 
 <!-- Footer -->
